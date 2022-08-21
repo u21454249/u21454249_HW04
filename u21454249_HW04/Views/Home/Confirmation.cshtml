@@ -1,0 +1,22 @@
+﻿@model List<u21454249_HW04.Models.Booking>
+@{
+    ViewBag.Title = "Confirmation";
+}
+
+<h2>Confirmation</h2>
+<div class="jumbotron">
+  
+<div class="row">
+    <a class="btn btn-primary" href="@Url.Action("AddBooking","Home")">Create another booking</a>
+</div>
+@foreach (var booking in Model)
+{
+    <div class="row">
+        <h4>Booking</h4>
+        <h6>@booking.getConfirmation()</h6>
+        <h7>@booking.getDetails())</h7>
+    </div>
+}
+    
+</div>
+

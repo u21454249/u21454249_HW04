@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "DonorList";
+}
+
+<html>
+
+<head>
+    <title>INF272 Section B Question 1</title>
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <link href="scripts/site.css" rel="stylesheet">
+    <style type="text/css">
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="content">
+            <div class="content-body">
+                <div class="main-text">Add your Name to the donor list</div>
+                <input type="hidden" id="hfRowIndex" value="" />
+                <table class="specialTable">
+                    <tr>
+                        <td class="specialTable">
+                            <input type="text" name="Id" id="txtText" class="p" />
+                            <button type='button' id='btnUpdate' style="display: none;" class="button">Update</button>
+                            <button type='button' id='btnAdd' class="button">Add</button>
+
+                        </td>
+                    </tr>
+                </table>
+                <table id="tblTable" class="table">
+                    <thead>
+                    <tr>Name and Surname</tr>
+                    <tr></tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+@section Scripts {
+
+    <script type="text/javascript" src="@Url.Content("~/Scripts/Donor/Donor.js")" asp-append-version="true"></script>
+
+}
+
+

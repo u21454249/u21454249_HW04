@@ -1,0 +1,132 @@
+﻿@using u21454249_HW04.Models
+@{
+    ViewBag.Title = "About";
+}
+<style type="text/css">
+    .carousel-inner {
+        height: 300px;
+    }
+
+
+    .item, img {
+        height: 100%;
+        width: 100%;
+        border: 1px solid black;
+    }
+
+    .jumbotron {
+        background-color: #ffd800;
+    }
+
+    .btn {
+        border: none;
+        background-color: blue;
+        padding: 14px 28px;
+        font-size: 16px;
+        cursor: pointer;
+        display: inline-block;
+    }
+</style>
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Font Awesome 5 Icons</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+<body>
+    <div class="carousel-inner" role="listbox">
+
+
+        <div class="item active">
+
+            <img src="~/Diagrams/SRHR.png">
+
+            <div class="carousel-caption">
+                <h1 style="text-align:right; padding:10px; color:coral;">Sexual And reproductive health</h1>
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid">
+
+        <div class="container">
+
+            <h2 class="my-5">What are Sexual and reproductive health rights?</h2>
+            <p>Sexual and Reproductive Health and Rights (SRHR) can be seen as a determining factor in one’s well-being and as an essential part of human rights. Although the topic receives a lot of attention nowadays, the sexual needs and desires of people with a disability are rarely addressed. Due to misunderstandings and social prejudices, they are excluded from information and they often don't have access to SRHR related services and care, leaving them amongst the most marginalized groups when it comes to SRHR.</p>
+            <div class="row">
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-2">
+                    <div class="card h-100">
+                        <img src="~/Diagrams/AbortionRights.jpeg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Access to Safe Abortions</h5>
+                            <p class="card-text">
+                                Unsafe abortion is one of the main causes of maternal death globally, and the only one that is almost entirely preventable.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <P class="card-text">
+                                <a href="https://news.un.org/en/story/2022/03/1113612" class="btn btn-primary btn-lg">Read More &raquo;</a>
+                            </P>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-2">
+                    <div class="card h-100">
+                        <img src="~/Diagrams/maternal-mortality.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-body">
+                                <h5 class="card-title">Maternal Mortality</h5>
+                                <p class="card-text">
+                                    Maternal mortality refers to deaths due to complications from pregnancy or childbirth. From 2000 to 2017, the global maternal mortality ratio declined by 38 per cent – from 342 deaths to 211 deaths per 100,000 live births, according to UN inter-agency estimates. This translates into an average annual rate of reduction of 2.9 per cent. While substantive, this is less than half the 6.4 per cent annual rate needed to achieve the Sustainable Development global goal of 70 maternal deaths per 100,000 live births.
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <P class="card-text">
+                                    <a href="https://www.statssa.gov.za/?p=15321#:~:text=Nationally%2C%20the%20ratio%20decreased%20from,experiencing%20a%20decrease%20in%20MMFR." class="btn btn-primary btn-lg">Read More &raquo;</a>
+                                </P>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-2">
+                <div class="card h-100">
+
+                    <img src="~/Diagrams/Adolenscences.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Adolenscensent sexual and reproductive rights</h5>
+                        <p class="card-text">
+                            Sexual and Reproductive Health Rights mean “a state
+                            of physical, emotional, mental and social wellbeing in
+                            relation to all aspects of sexuality and reproduction, not
+                            merely the absence of disease, dysfunction or infirmity.”
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <P class="card-text">
+                            <a href="@Url.Content("~/Diagrams/S27-adolescentSRHR.pdf")" class="btn btn-primary btn-lg">Read More &raquo;</a>
+                        </P>
+                    </div>
+                </div>
+            </div>
+
+            <script src="script.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        </div>
+    </div>
+    <div class="row">
+        <a class="btn btn-primary pull-right" href="@Url.Action("Addbooking","Home")">Make a booking</a>
+    </div>
+    <div class="row">
+        <a class="btn btn-primary pull-left" href="@Url.Action("Donate","Home")">Donate</a>
+    </div>
+</body>
+
+</html>
+

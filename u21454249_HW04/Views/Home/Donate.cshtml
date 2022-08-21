@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Donate";
+}
+
+@using (Html.BeginForm("Addbooking", "Home", FormMethod.Post))
+{
+
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" min="0" max="399" class="form-control" name="name" id="name">
+    </div>
+    <div class="form-group">
+        <label for="surname">Surname</label>
+        <input type="text" min="0" max="399" class="form-control" name="surname" id="surname">
+    </div>
+    <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="text" min="0" max="399" class="form-control" name="email" id="email">
+    </div>
+    <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="text" min="0" max="399" class="form-control" name="phone" id="phone">
+    </div>
+    <div class="form-group">
+        <label for="location">Location</label>
+        <select class="form-control" name="location" id="location">
+            <option value="#ff0000">Gauteng</option>
+            <option value="#ff8000">Limpopo</option>
+            <option value="#ffff00">North west</option>
+            <option value="#40ff00">Western Cape</option>
+            <option value="#00ffff">Eastern cape</option>
+            <option value="#0000ff">Northern cape</option>
+            <option value="#8000ff">North west</option>
+            <option value="#ff00ff">Free state</option>
+            <option value="#ff00ff">KZN</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="amount">Amount:</label>
+        <input type="text" min="0" max="399" class="form-control" name="amount" id="amount">
+    </div>
+
+    <div class="row">
+        <a class="btn btn-primary pull-right" href="@Url.Action("DonorList","Home")">Donate!</a>
+    </div>
+}

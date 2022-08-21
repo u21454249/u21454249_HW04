@@ -1,0 +1,105 @@
+﻿
+@{
+    ViewBag.Title = "Addbooking";
+}
+
+<h2>Make a booking</h2>
+
+@using (Html.BeginForm("Addbooking", "Home", FormMethod.Post))
+{
+    <div class="form-group">
+        <label for="bookingType">Select the type of service:</label>
+        <select class="form-control" id="bookingType" name="type">
+            <option value="1">Teenagers</option>
+            <option value="2">Maternal</option>
+            <option value="3">Plan B</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" min="0" max="399" class="form-control" name="name" id="name">
+    </div>
+    <div class="form-group">
+        <label for="surname">Surname</label>
+        <input type="text" min="0" max="399" class="form-control" name="surname" id="surname">
+    </div>
+    <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="text" min="0" max="399" class="form-control" name="email" id="email">
+    </div>
+    <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="text" min="0" max="399" class="form-control" name="phone" id="phone">
+    </div>
+    <!--For the Plan B option-->
+    <div class="form-group bplan">
+        <label for="farlong">Estimate weeks of pregnancy:</label>
+        <input type="number" min="0" max="399" class="form-control" name="Farlong" id="farlong">
+    </div>
+
+    <!--For the Teenager option-->
+    <div class="form-group Ado">
+        <label for="age">How old are you?</label>
+        <input type="number" min="0" max="399" class="form-control" name="age" id="age">
+    </div>
+    <div class="form-group Ado">
+        <label for="grade">What grade are you in?</label>
+        <input type="number" min="0" max="399" class="form-control" name="grade" id="grade">
+    </div>
+
+    <!--For the Martenal option-->
+    <div class="form-group Mom">
+        <label for="condition">Indicate reason for appointment:</label>
+        <select class="form-control" name="condition" id="condition">
+            <option value="Pre-Partum">Pre-Partum</option>
+            <option value="Post_Partum">Post_Partum</option>
+            <option value="Nursing">Nursing</option>
+            <option value="Nutrition">Nutrition</option>
+            <option value="Supplements">Supplements</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="location">Location</label>
+        <select class="form-control" name="location" id="location">
+            <option value="Gauteng">Gauteng</option>
+            <option value="Limpopo">Limpopo</option>
+            <option value="North west">North west</option>
+            <option value="Western Cape">Western Cape</option>
+            <option value="Eastern cape">Eastern cape</option>
+            <option value="Northern cape">Northern cape</option>
+            <option value="North west">North west</option>
+            <option value="Free state">Free state</option>
+            <option value="KZN">KZN</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="date">Date</label>
+        <input type="date" id="myDate" value="2022-08-15">
+    </div>
+
+    <div class="form-group">
+        <label for="time">Time:</label>
+        <select class="form-control" id="time" name="time">
+            <option value="8AM">8AM</option>
+            <option value="9AM">9AM</option>
+            <option value="10AM">10AM</option>
+            <option value="11AM">11AM</option>
+            <option value="12PM">12PM</option>
+            <option value="13PM">13PM</option>
+            <option value="14PM">14PM</option>
+            <option value="15PM">15PM</option>
+        </select>
+    </div>
+
+
+    <button href="@Url.Action("DonorList","Home")" type="submit" class="btn btn-primary">Submit</button>
+}
+
+@section Scripts {
+
+    <script type="text/javascript" src="@Url.Content("~/Scripts/Booking type/Booking.js")" asp-append-version="true"></script>
+
+}
+
+
